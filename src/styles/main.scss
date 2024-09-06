@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+$grey: #5c5c5c;
+$light: #ebebeb;
+$dark: #141414;
+$red: #c1121e;
+$dark-red: #b0101b;
+$light-grey: #a3a3a3;
+$white: #ffffff;
+$pale-grey: #d6d6d6;
+$dark-grey: #333333;
+$blue: #1184c2;
+$light-pink: #ebebeb;
+
+$font-jost: "Source Sans 3", sans-serif;
+
+// $r_min_mob: 320px;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $font-jost;
+}
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+.logo {
+  display: block;
+  background-image: url(../images/logoPL.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 2.1rem;
+  width: 100%;
+}
+.container {
+  max-width: 101.6rem;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.test {
+  width: 101.6rem;
+}
+
+.header {
+  max-width: 101.6rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  &__menu-buttons {
+    min-width: 30%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  &__item-btn {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: none;
+    color: grey;
+    border-radius: 4px;
+    padding: 4px 12px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+  }
+  &__item-btn-none {
+    border: none;
+  }
+  &__text {
+    margin-left: 1rem;
+  }
+}
+.divider {
+  width: 100%;
+  border-color: $light-grey;
+  border: none;
+  border-top: 0.1rem solid $light-grey;
+}
+
+.types {
+  width: 101.6rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__text {
+    font-family: $font-jost;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $grey;
+    text-align: center;
+    line-height: 2.4rem;
+  }
+  &__nav {
+    display: flex;
+    padding-left: 0;
+    gap: 0.8rem;
+  }
+  &__item {
+    margin: 0.1rem;
+  }
+
+  &__link {
+    font-family: $font-jost;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: $dark;
+    align-items: center;
+  }
+}
+.types__relative {
+  position: relative;
+  &__text {
+    font-family: $font-jost;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $grey;
+    text-align: center;
+    line-height: 2.4rem;
+  }
+  &__nav {
+    display: flex;
+    padding-left: 0;
+    gap: 0.8rem;
+  }
+  &__item {
+    margin: 0.1rem;
+  }
+
+  &__link {
+    font-family: $font-jost;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: $dark;
+    align-items: center;
+  }
+}
+.panel {
+  &__search-pannel {
+    width: 31.2rem;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    border: 0.1rem solid $light;
+    cursor: pointer;
+  }
+  &__search-panel:hover {
+    width: 35.2;
+    height: 1.5;
+  }
+  &__pointer-event {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    opacity: 0.7;
+    border: none;
+    color: #a3a3a3;
+  }
+
+  &___btn {
+    position: absolute;
+    top: 0%;
+    right: 12%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__img-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 0rem 0.8rem 0.8rem 0rem;
+    background-color: $red;
+    position: absolute;
+  }
+
+  &__cursor-svg {
+    width: 1.5 rem;
+    height: 1.5 rem;
+    color: #ffffff;
+  }
+}
+
+.page {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+
+  .__flex {
+    display: flex;
+    justify-content: column;
+    align-items: center;
+  }
+}
+.arrow {
+  font-size: 1rem;
+  color: $grey;
+  position: relative;
+  bottom: -0.2rem;
+}
+.page__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about {
+  &__list {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: left;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  &__info {
+    font-family: $font-jost;
+    font-size: 1.2rem;
+    color: $grey;
+  }
+  &__title {
+    font-family: $font-jost;
+    font-size: 3.2rem;
+    font-weight: 600;
+    max-width: 48rem;
+  }
+  &__button {
+    display: inline-block;
+    padding: 0.2rem 0.6rem 2px 0.6rem;
+    border-color: $pale-grey;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: $dark-grey;
+    cursor: pointer;
+    margin-bottom: 2rem;
+  }
+  &__button-icon {
+    display: inline-block;
+  }
+
+  &__button-svg {
+    font-size: 1rem;
+    color: $blue;
+  }
+  &__text {
+    font-family: $font-jost;
+    font-size: 0.1rem;
+    text-align: center;
+    line-height: 1.3rem;
+  }
+}
+
+.event-details {
+  &__details-box {
+    width: 66.4rem;
+  }
+  &__th {
+    text-align: left;
+    font-weight: 400;
+    font-family: $font-jost;
+    font-size: 1.6rem;
+    color: $grey;
+    padding-right: 1rem;
+    padding-left: 0;
+  }
+  &__tr-row {
+    margin-top: 1rem;
+  }
+  &__address {
+    font-weight: 400;
+    font-family: $font-jost;
+    font-size: 1.6rem;
+    color: $grey;
+    padding: 1rem;
+    padding-left: 0;
+  }
+  &__bold {
+    font-weight: 600;
+    font-family: $font-jost;
+    font-size: 1.6rem;
+    padding-left: 0;
+    color: $dark;
+  }
+  &__link {
+    font-weight: 600;
+    font-family: $font-jost;
+    font-size: 1.6rem;
+    padding-left: 0;
+    color: $red;
+    text-decoration: underline;
+  }
+  &__figure-items {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    gap: 0.5rem;
+  }
+  i {
+  }
+  &__icon-i {
+    &::before {
+      content: "";
+      background-image: url(../images/adress.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 1.6rem;
+      height: 1.6rem;
+      display: block;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.calendar-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.6rem 1rem 1.6rem;
+  margin-top: 2rem;
+  padding-left: 0;
+  &__btns-flex {
+    display: flex;
+    gap: 0.8rem;
+  }
+  &__btn-calendar {
+    border: 0.1rem solid $light-pink;
+    background-color: transparent;
+    border-radius: 0.8rem;
+    font-family: $font-jost;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $dark-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+.calendar-share {
+  &__button-share,
+  &__button-bookmark {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0.1rem solid $light-pink;
+    background-color: transparent;
+    border-radius: 0.8rem;
+    padding: 0.9rem;
+    gap: 0.8rem;
+  }
+  &__icon-share {
+    color: $grey;
+  }
+}
+.banner-container {
+  &__advertisment {
+    color: $grey;
+    font-family: $font-jost;
+    font-size: 1.4rem;
+    padding-left: 0;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: left;
+  }
+}
+.hr-red {
+  border: none;
+  border-top: 0.1rem solid $dark-red;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+}
+.button-top {
+  display: inline-block;
+
+  &__on-top {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: $dark-grey;
+    text-transform: uppercase;
+    padding-left: 0.5rem;
+  }
+  &__on-top-icon {
+    position: relative;
+    bottom: -0.6rem;
+
+    color: $dark-grey;
+  }
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  &__logo-footer {
+    width: 13.6rem;
+    height: 2rem;
+    background-image: url(../images/logoPL.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__item:not(:last-child)::after {
+    content: "|";
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    padding-left: 0.1rem;
+    color: $grey;
+    margin-right: 5px;
+  }
+  &__link {
+    color: $dark-grey;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+}
+
+.footer-media {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  font-size: 1.2rem;
+  font-family: $font-jost;
+  &__link {
+    text-decoration: none;
+    color: $red;
+  }
+  &__wrapper-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__social-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  &__media-icons {
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__f-icon {
+    background-image: url(../images/facebook.svg);
+  }
+  &__in-icon {
+    background-image: url(../images/in.svg);
+  }
+  &__x-icon {
+    background-image: url(../images/X.svg);
+  }
+}
