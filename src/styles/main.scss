@@ -13,8 +13,8 @@ $blue: #1184c2;
 $light-pink: #ebebeb;
 
 $font-jost: "Source Sans 3", sans-serif;
-
-// $r_min_mob: 320px;
+$mob-max-width: 37.5rem;
+$margin-mob: 0.8rem;
 
 html {
   font-size: 10px;
@@ -23,9 +23,18 @@ html {
 body {
   font-size: 1.6rem;
   font-family: $font-jost;
+  @media screen and (max-width: $mob-max-width) {
+    .divider-top {
+      display: none;
+    }
+  }
 }
+
+a:active,
+a:hover,
 a {
   text-decoration: none;
+  color: $grey;
 }
 
 ul,
@@ -40,16 +49,19 @@ li {
   background-size: contain;
   height: 2.1rem;
   width: 100%;
+  @media screen and (max-width: $mob-max-width) {
+    width: 40%;
+  }
 }
 .container {
   max-width: 101.6rem;
   margin: 0 auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.test {
-  width: 101.6rem;
+  @media screen and (max-width: $mob-max-width) {
+    width: 100vw;
+    padding: 0;
+  }
 }
 
 .header {
@@ -59,11 +71,28 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+
+  &__menu-mob {
+    display: none;
+    @media screen and (max-width: $mob-max-width) {
+      display: flex;
+    }
+  }
+
   &__menu-buttons {
     min-width: 30%;
     display: flex;
     justify-content: right;
     align-items: center;
+    @media screen and (max-width: $mob-max-width) {
+      display: none;
+    }
+  }
+  &__menu-buttons-mob {
+    display: none;
+    @media screen and (max-width: $mob-max-width) {
+      display: flex;
+    }
   }
   &__item-btn {
     display: flex;
@@ -97,6 +126,39 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: $mob-max-width) {
+    width: 100%;
+  }
+
+  &__navigation {
+    width: 100%;
+    margin-right: 3rem;
+    @media screen and (max-width: $mob-max-width) {
+      display: none;
+    }
+  }
+
+  &__navigation-mob {
+    display: none;
+    @media screen and (max-width: $mob-max-width) {
+      margin: 0;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__nav-mob {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    li {
+      text-align: center;
+      border: 0.1rem solid $light-grey;
+      margin: 0;
+      padding: 0.6rem 1.2rem;
+    }
+  }
+
   &__text {
     font-family: $font-jost;
     font-size: 1.6rem;
@@ -107,6 +169,7 @@ li {
   }
   &__nav {
     display: flex;
+    justify-content: space-between;
     padding-left: 0;
     gap: 0.8rem;
   }
@@ -124,6 +187,9 @@ li {
 }
 .types__relative {
   position: relative;
+  @media screen and (max-width: $mob-max-width) {
+    display: none;
+  }
   &__text {
     font-family: $font-jost;
     font-size: 1.6rem;
@@ -203,7 +269,9 @@ li {
 .page {
   margin-top: 2.5rem;
   margin-bottom: 2rem;
-
+  @media screen and (max-width: $mob-max-width) {
+    margin-top: 0;
+  }
   .__flex {
     display: flex;
     justify-content: column;
@@ -219,6 +287,9 @@ li {
 .page__flex {
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: $mob-max-width) {
+    display: block;
+  }
 }
 
 .about {
@@ -228,18 +299,29 @@ li {
     justify-content: left;
     align-items: center;
     padding-left: 0;
+    @media screen and (max-width: $mob-max-width) {
+      margin: 0 $margin-mob;
+    }
   }
 
   &__info {
     font-family: $font-jost;
     font-size: 1.2rem;
     color: $grey;
+    @media screen and (max-width: $mob-max-width) {
+      font-size: 1rem;
+    }
   }
   &__title {
     font-family: $font-jost;
     font-size: 3.2rem;
     font-weight: 600;
     max-width: 48rem;
+    @media screen and (max-width: $mob-max-width) {
+      font-size: 2rem;
+      margin-left: $margin-mob;
+      margin-right: $margin-mob;
+    }
   }
   &__button {
     display: inline-block;
@@ -250,6 +332,10 @@ li {
     color: $dark-grey;
     cursor: pointer;
     margin-bottom: 2rem;
+    @media screen and (max-width: $mob-max-width) {
+      margin-left: $margin-mob;
+      margin-right: $margin-mob;
+    }
   }
   &__button-icon {
     display: inline-block;
@@ -270,6 +356,11 @@ li {
 .event-details {
   &__details-box {
     width: 66.4rem;
+    @media screen and (max-width: $mob-max-width) {
+      margin-left: $margin-mob;
+      margin-right: $margin-mob;
+      max-width: calc($mob-max-width - 2rem);
+    }
   }
   &__th {
     text-align: left;
@@ -305,14 +396,14 @@ li {
     padding-left: 0;
     color: $red;
     text-decoration: underline;
+    word-break: break-all;
   }
+
   &__figure-items {
     display: flex;
     align-items: center;
     padding-left: 0;
     gap: 0.5rem;
-  }
-  i {
   }
   &__icon-i {
     &::before {
@@ -336,9 +427,16 @@ li {
   padding: 1rem 1.6rem 1rem 1.6rem;
   margin-top: 2rem;
   padding-left: 0;
+  @media screen and (max-width: $mob-max-width) {
+    display: block;
+  }
   &__btns-flex {
     display: flex;
     gap: 0.8rem;
+    @media screen and (max-width: $mob-max-width) {
+      display: block;
+      margin-bottom: 1rem;
+    }
   }
   &__btn-calendar {
     border: 0.1rem solid $light-pink;
@@ -352,9 +450,18 @@ li {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    @media screen and (max-width: $mob-max-width) {
+      margin-bottom: 1rem;
+    }
   }
 }
 .calendar-share {
+  @media screen and (max-width: $mob-max-width) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    margin-bottom: 2rem;
+  }
   &__button-share,
   &__button-bookmark {
     background-color: transparent;
@@ -364,6 +471,9 @@ li {
     border-radius: 0.8rem;
     padding: 0.9rem;
     gap: 0.8rem;
+    @media screen and (max-width: $mob-max-width) {
+      margin-right: 1rem;
+    }
   }
   &__icon-share {
     color: $grey;
@@ -378,11 +488,28 @@ li {
     padding-bottom: 1rem;
     display: flex;
     justify-content: left;
+    @media screen and (max-width: $mob-max-width) {
+      max-height: 1rem;
+      margin-left: $margin-mob;
+      margin-right: $margin-mob;
+    }
+  }
+  &__img {
+    width: 30rem;
+    height: 62.4rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/Image_reklama.png);
+    @media screen and (max-width: $mob-max-width) {
+      background-image: url(../images/Reklama_interscroller.png);
+      width: 37.5rem;
+      height: 28.8rem;
+    }
   }
 }
 .hr-red {
   border: none;
-  border-top: 0.1rem solid $dark-red;
+  border-top: 0.2rem solid $dark-red;
   margin-top: 6rem;
   margin-bottom: 1rem;
 }
@@ -409,18 +536,30 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+  @media screen and (max-width: $mob-max-width) {
+    flex-direction: column;
+  }
   &__logo-footer {
     width: 13.6rem;
     height: 2rem;
     background-image: url(../images/logoPL.svg);
     background-size: contain;
     background-repeat: no-repeat;
+    @media screen and (max-width: $mob-max-width) {
+      width: 14.2rem;
+      height: 2.3rem;
+    }
   }
   &__list {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
+    @media screen and (max-width: $mob-max-width) {
+      flex-direction: column;
+      gap: 1rem;
+      padding-left: 0;
+    }
   }
 
   &__item:not(:last-child)::after {
@@ -430,6 +569,9 @@ li {
     padding-left: 0.1rem;
     color: $grey;
     margin-right: 5px;
+    @media screen and (max-width: $mob-max-width) {
+      content: "";
+    }
   }
   &__link {
     color: $dark-grey;
@@ -444,6 +586,10 @@ li {
   font-size: 1.4rem;
   font-size: 1.2rem;
   font-family: $font-jost;
+  @media screen and (max-width: $mob-max-width) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
   &__link {
     text-decoration: none;
     color: $red;
@@ -451,6 +597,10 @@ li {
   &__wrapper-flex {
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: $mob-max-width) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
   &__social-icons {
     display: flex;
@@ -464,6 +614,9 @@ li {
     height: 2.4rem;
     background-repeat: no-repeat;
     background-size: contain;
+    @media screen and (max-width: $mob-max-width) {
+      margin: 1rem;
+    }
   }
   &__f-icon {
     background-image: url(../images/facebook.svg);
@@ -473,5 +626,10 @@ li {
   }
   &__x-icon {
     background-image: url(../images/X.svg);
+  }
+  &__text {
+    @media screen and (max-width: $mob-max-width) {
+      text-align: center;
+    }
   }
 }

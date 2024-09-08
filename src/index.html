@@ -11,6 +11,9 @@
 
 <body>
     <header class="header">
+        <div class="header__menu-mob">
+            <span class="material-icons">menu</span>
+        </div>
         <a href="#" class="logo"></a>
         <div class="header__menu-buttons">
             <button class="header__item-btn header__item-btn-none">
@@ -22,8 +25,11 @@
                 <a href="#" class="header__text">Newsletter</a>
             </button>
         </div>
+        <div class="header__menu-buttons-mob">
+            <span class="material-icons">person</span>
+        </div>
     </header>
-    <hr class="divider">
+    <hr class="divider divider-top">
     <div class="types">
         <nav class="types__navigation">
             <ul class="types__nav">
@@ -50,6 +56,15 @@
                 </li>
             </ul>
         </nav>
+
+        <nav class="types__navigation-mob">
+            <ul class="types__nav-mob">
+                <li class="types__item"><a class="types__link" href="#">Články</a></li>
+                <li class="types__item"><a class="types__link" href="#">Časopisy</a></li>
+                <li class="types__item"><a class="types__link" href="#">Obory</a></li>
+            </ul>
+        </nav>
+
         <div class="types__relative panel">
             <input class="panel__search-pannel" type="search" />
             <label class="panel__pointer-event">Hledat...</label>
@@ -61,7 +76,8 @@
             </button>
         </div>
     </div>
-    <hr class="divider">
+
+    <hr class="divider divider-top">
     <div class="container">
         <div class="page">
             <div class="page__flex about">
@@ -169,7 +185,8 @@
                 <div class="banner-container">
                     <div class="banner-container__banner">
                         <title class="banner-container__advertisment">Reklama</title>
-                        <img class="bg-banner" src="images/Image_reklama.png" alt="#">
+                        <div class="banner-container__img"></div>
+
                     </div>
                 </div>
             </div>
